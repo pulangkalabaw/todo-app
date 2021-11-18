@@ -1,0 +1,28 @@
+GET http://localhost:3000
+
+###
+GET http://localhost:3000/users
+
+###
+POST http://localhost:3000/users/create
+Content-Type: application/json
+
+{
+    "name": "Test name",
+    "email": "test@mailinator.com"
+}
+
+###
+PATCH http://localhost:3000/users/61962c359b1b88091215489e
+Content-Type: application/json
+
+{
+    "name": "Test name 2",
+    "email": "test2@mailinator.com"
+}
+
+###
+DELETE http://localhost:3000/users/61962c359b1b88091215489e
+
+###
+GET http://localhost:3000/users/61962c359b1b88091215489e

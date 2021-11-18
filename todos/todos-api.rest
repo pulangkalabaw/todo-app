@@ -1,0 +1,27 @@
+GET http://localhost:3000
+###
+GET http://localhost:3000/todos
+
+###
+POST http://localhost:3000/todos/create
+Content-Type: application/json
+
+{
+    "todo_name": "TEST 1",
+    "created_by": "6194dc3745b1e650726bf379"
+}
+
+###
+PATCH http://localhost:3000/todos/619628cce59dad0098d33186
+Content-Type: application/json
+
+{
+    "todo_name": "Named todo",
+    "updated_by": "6194dc3745b1e650726bf379"
+}
+
+###
+DELETE http://localhost:3000/todos/619628cce59dad0098d33186
+
+###
+GET http://localhost:3000/todos/619628cce59dad0098d33186
