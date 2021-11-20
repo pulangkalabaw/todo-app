@@ -2,6 +2,7 @@ require('dotenv').config()
 const express = require('express')
 const todoRoutes = require('./todos/todo-routes')
 const userRoutes = require('./users/user-routes')
+const userTodosRoutes = require('./users-todos/user-todos-routes')
 const mongoose = require('mongoose')
 const app = express()
 
@@ -20,6 +21,7 @@ app.get('/', (req, res) => {
 })
 app.use('/todos', todoRoutes)
 app.use('/users', userRoutes)
+app.use('/users-todos', userTodosRoutes)
 
 app.listen(3000, _ => {
     console.log("Listening on port 300")

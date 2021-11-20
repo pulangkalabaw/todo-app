@@ -1,21 +1,5 @@
 const { userModel } = require('../schemas')
 const mongoose = require('mongoose')
-const Types = mongoose.Types
-
-const getUserInfoLookup =
-{
-    $lookup: {
-        from: 'users',
-        as: 'created_by_info',
-        localField: 'created_by',
-        foreignField: '_id',
-        pipeline: [
-            {
-                $limit: 1
-            }
-        ]
-    }
-}
 
 const index = async (req, res) => {
     try {

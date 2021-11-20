@@ -1,0 +1,13 @@
+GET http://localhost:3000
+
+###
+GET http://localhost:3000/users-todos
+
+###
+PATCH http://localhost:3000/users-todos/6194dc3745b1e650726bf37a/6194dd0245b1e650726bf37c/attach
+
+###
+GET http://localhost:3000/users-todos/6194dc3745b1e650726bf37a
+
+###
+PATCH http://localhost:3000/users-todos/6194dc3745b1e650726bf37a/6194dd0245b1e650726bf37c/detach

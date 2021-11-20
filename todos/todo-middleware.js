@@ -22,7 +22,7 @@ const getTodoById = async (req, res, next) => {
         let todoWithUser = await todoModel.findById(req.params.id)
 
         if (!todoWithUser) {
-            res.status(400).json({ message: "Could not find the record" })
+            res.status(400).json({ message: "Could not find the todo record" })
             return
         }
         else {
